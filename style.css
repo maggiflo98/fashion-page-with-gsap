@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: whitesmoke;
+  font-family: "Montserrat";
+  margin: 30px;
+  cursor: pointer;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  text-transform: uppercase;
+  align-items: center;
+  color: purple;
+  padding-top: 20px;
+}
+
+.nav-link ul li {
+  display: inline-block;
+  padding-right: 30px;
+}
+
+ul {
+  margin-top: 20px;
+  list-style: none;
+}
+
+.logo {
+  padding-right: 20px;
+  font-size: 40px;
+  color: purple;
+}
+a {
+  text-decoration: none;
+  color: purple;
+}
+
+.circle {
+  height: 30rem;
+  width: 30rem;
+  background-color: hotpink;
+  clip-path: circle(50% at 50%);
+  z-index: -3;
+  margin-left: 30%;
+}
+.circle img {
+  width: 50%;
+  height: 100%;
+  transform: translate(40%, 20%);
+  z-index: 2;
+}
+.wrapper {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  /* grid-row-gap: 30px; */
+  grid-column-gap: 10px;
+}
+.wrapper img {
+  width: 100%;
+}
+.wrapper img:hover {
+  transform: scale(1.2);
+}
+footer {
+  margin-top: 5rem;
+  padding: 30px;
+  background-color: purple;
+}
+i {
+  margin-top: 2rem;
+  color: white;
+}
+.about {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: pink;
+  opacity: 0.8;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+/* open states */
+.about:target {
+  opacity: 1;
+  visibility: visible;
+}
+.about_closed:target {
+}
+.about_closed,
+:visited {
+  color: purple;
+  position: absolute;
+  right: 0rem;
+  font-size: 3rem;
+  text-decoration: none;
+  display: inline-block;
+  transform: translateY(-4rem);
+}
+.about-content {
+  height: 75vh;
+  background-color: white;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0s 0.2s;
+}
+.about img {
+  display: block;
+  width: 100%;
+}
+.about-left {
+  width: 33.3333%;
+  float: left;
+}
+.about-right {
+  width: 66.66%;
+  float: right;
+}
+p {
+  padding-top: 20px;
+  column-count: 2;
+  column-gap: 2rem;
+  column-rule: 1px solid purple;
+}
+figcaption {
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  transform: translate(50%, -50%);
+  color: blackss;
+  font-size: 1.7rem;
+  opacity: 0;
+}
+
+figcaption:hover {
+  opacity: 1;
+}
